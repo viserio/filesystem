@@ -1,7 +1,8 @@
 <?php
 declare(strict_types=1);
-namespace Viserio\Component\Filesystem\Proxie;
+namespace Viserio\Component\Filesystem\Proxy;
 
+use Viserio\Component\Filesystem\FilesystemManager;
 use Viserio\Component\StaticalProxy\StaticalProxy;
 
 class Storage extends StaticalProxy
@@ -13,6 +14,6 @@ class Storage extends StaticalProxy
      */
     public static function getInstanceIdentifier()
     {
-        return 'filesystem';
+        return FilesystemManager::class;
     }
 }
